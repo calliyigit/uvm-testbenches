@@ -18,5 +18,3 @@ I used this example to study:
 
 ---
 
-## 🛠 Project Structure
-
