@@ -18,3 +18,14 @@ I used this example to study:
 
 ---
 
+## ▶️ Run on EDA Playground
+
+You can **run and simulate this UVM testbench online** using the following EDA Playground link:
+
+🔗 [https://www.edaplayground.com/x/d3ar](https://www.edaplayground.com/x/d3ar)
+
+This allows you to quickly test and explore the testbench without local setup.
+
+---
+
+**This repository is created solely for educational purposes, and the original source is credited above.**
