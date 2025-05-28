@@ -23,7 +23,7 @@ I used this reference to study and practice:
 
 You can run and simulate this UVM testbench online using the following EDA Playground link:
 
-🔗 [https://www.edaplayground.com/](https://www.edaplayground.com/x/CS_U) *(replace this with a direct link if uploaded)*
+🔗 [https://www.edaplayground.com/](https://www.edaplayground.com/x/CS_U)
 
 This allows you to quickly test and explore the testbench without setting up a local environment.
 
