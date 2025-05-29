@@ -3,6 +3,7 @@ class spi_env extends uvm_env;
 
     spi_agent agnt;
     spi_scoreboard scb;
+  	
 
     //constructor
     function new(string name = "spi_env", uvm_component parent);
@@ -19,6 +20,7 @@ class spi_env extends uvm_env;
     endfunction
 
   	function void connect_phase(uvm_phase phase);
-        agnt.mon.item_collected_port.connect(scb.item_collected_export);
+        agnt.mon.actual_ap.connect(scb.actual_ap);
+      	agnt.drv.expected_ap.connect(scb.expected_ap);
     endfunction
 endclass
