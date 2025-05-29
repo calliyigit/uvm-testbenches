@@ -5,6 +5,7 @@ class spi_seq_item extends uvm_sequence_item;
     rand bit[7:0] miso_data;  //our vip send this data to master
                               //then we read this data via data_out
          bit[7:0] mosi;
+  		 bit[7:0] miso;
          
 
     `uvm_object_utils_begin(spi_seq_item)
