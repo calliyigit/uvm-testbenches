@@ -3,10 +3,13 @@ class spi_driver extends uvm_driver#(spi_seq_item);
 
     //Define interface
     virtual spi_interface vif;
+  
+  	uvm_analysis_port #(spi_seq_item) expected_ap;
     
     //Constructor
     function new(string name = "spi_driver", uvm_component parent);
         super.new(name, parent);
+      	expected_ap = new("expected_ap", this);
     endfunction
 
     //Build phase
@@ -20,7 +23,9 @@ class spi_driver extends uvm_driver#(spi_seq_item);
     //Run phase
     task run_phase(uvm_phase phase);
         forever begin
-            seq_item_port.get_next_item(req);        
+            seq_item_port.get_next_item(req);
+          `uvm_info(get_type_name(), $sformatf("Masterin rastgele gonderecegi veri (sequence tarafindan random uretilir) (mosi) - MOSI %d,, masterin almasi beklenen veri (slave random surer) (miso) - MISO %d", req.mosi_data_di, req.miso_data), UVM_LOW)
+          	expected_ap.write(req);
             drive(req);                              
             seq_item_port.item_done();               
         end
